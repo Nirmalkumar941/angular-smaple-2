@@ -1,0 +1,21 @@
+<div class="overlay" [class.active]="enabled && !showCustomizedLoader"
+ >
+  <div class="overlay-background"></div>
+  <div class="overlay-content" style="background-color: transparent; border: none;">
+    <div class="loader-gcsp">
+    <img class="loader-img" src="assets/images/Loader.gif"/>
+     <div class="load-text">Please wait...</div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" [class.active]="true" *ngIf="showCustomizedLoader">
+  <div class="overlay-background"></div>
+  <div class="overlay-content" style="background-color: transparent; border: none;">
+    <div class="loader-gcsp">
+    <img class="loader-img" src="assets/images/Loader.gif"/>
+     <div class="load-text">{{messageContent}}</div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,53 @@
+@import "../../../styles/abstract/mixins";
+@import "../../../styles/abstract/variable";
+
+
+
+.overlay {
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.overlay-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.overlay-content {
+  position: fixed;
+  top: 45vh;
+  left: 45vw;
+  background-color: white;
+  border: solid 1px #DBDBDB;
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  background-color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+
+  @include mobile-xs-up{
+    top: 40vh;
+    left: 40vw;
+  }
+  @include mobile-up{
+    top: 40vh;
+    left: 40vw;
+  }
+}
+
